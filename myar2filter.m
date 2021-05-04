@@ -7,7 +7,7 @@ eps = zeros(length(y),1);
 mu(1) = (param(1))/(1-param(2)-param(3));
 eps(1) = y(1) - mu(1);
 
-for t = 3:(length(y)+1)
+for t = 3:(length(y))
     
     mu(t) = param(1) + param(2)*y(t-1) + param(3)*y(t-2);
     eps(t) = y(t) - mu(t);
